@@ -102,7 +102,7 @@ struct CameraCaptureView: UIViewControllerRepresentable {
     }
 }
 
-@main
+
 struct CloFitApp: App {
     var body: some Scene {
         WindowGroup {
