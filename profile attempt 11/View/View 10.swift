@@ -7,9 +7,11 @@ struct ContentView: View {
     @State private var editedFirstName = "Sara"
     @State private var editedLastName = "Ali"
     @State private var isEditing = false
-
-    var body: some View {
+   
+    var body: some View
+    {
         NavigationView {
+           
             ZStack {
                 Color.white
 
@@ -23,9 +25,10 @@ struct ContentView: View {
                             .position(x: UIScreen.main.bounds.width / 2, y: UIScreen.main.bounds.height / 2)
                             .offset(y: -UIScreen.main.bounds.height / 2)
 
+                       
                         Text("Pear Body Shape")
-                            .font(Font.custom("SF-Pro", size: 25))
-                            .fontWeight(.medium)
+                            .fontWeight(.bold)
+                            .font(.system(size: 25)) // Change the font size to 24
                             .foregroundColor(Color.white)
                             .multilineTextAlignment(.center)
                             .padding(.bottom, 237.0)
@@ -96,8 +99,10 @@ struct ContentView: View {
                             Button(action: {
                                 // Implement action for "See more" button
                             }) {
-                                Text("See more>")
+                                Text("See more")
                                     .foregroundStyle((Color((UIColor(red: 0.37, green: 0.00, blue: 0.98, alpha: 1.00)))))
+                                Image(systemName: "chevron.right")
+                                    .foregroundColor(.movee)
                             }
                             .padding(.leading, 27.0)
                         }
@@ -145,13 +150,16 @@ struct ContentView: View {
                 .offset(y: UIScreen.main.bounds.height * 0.4 - 80)
 
                 HStack {
+//                    CircleDataView(title: "Shoulder Size", value: "32")
+//                        .offset(CGSize(width: 2, height: -40))
                     CircleDataView(title: "Shoulder Size", value: "32")
                         .offset(CGSize(width: 2, height: -40))
-                    CircleDataView(title: "Bust Size", value: "28").offset(CGSize(width: 2, height: -10))
+                    
+                    CircleDataView(title: "Bust Size", value: "28").offset(CGSize(width: -3, height: +10))
 
                     CircleDataView(title: "Waist Size", value: "33")
-
-                    CircleDataView(title: "Hip Size", value: "38").offset(CGSize(width: 2, height: -40))
+                        .offset(CGSize(width: 3, height: +10))
+                    CircleDataView(title: "Hip Size", value: "38").offset(CGSize(width: -2, height: -40))
                 }
                 .padding(.bottom, 24.0)
             }

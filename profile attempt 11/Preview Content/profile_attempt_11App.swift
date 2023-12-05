@@ -10,8 +10,21 @@ import SwiftUI
 @main
 struct profile_attempt_11App: App {
     var body: some Scene {
+        
+        WindowGroup {
+            View1()
+        }
+        
+        WindowGroup {
+            View2()
+        }
+        
         WindowGroup {
             ContentView()
         }
+        
+        
     }
+    
 }
+
